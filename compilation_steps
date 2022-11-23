@@ -1,0 +1,3 @@
+1. avr-gcc -mmcu=atmega32 -Wall -Os -o <file_name>.elf <file_name>.c
+2. avr-objcopy -j .text -j .data -O ihex <file_name>.elf <file_name>.hex
+3. sudo avrdude -p m32 -c usbtiny -P usb -U flash:w:<file_name>.hex -v
